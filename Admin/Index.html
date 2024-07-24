@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Driver Panel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Driver Panel</h1>
+        <div class="tabs">
+            <button class="tab-button" onclick="showTab('addDriver')">Add Driver</button>
+            <button class="tab-button" onclick="showTab('viewDrivers')">View Drivers</button>
+        </div>
+
+        <!-- Add Driver Tab -->
+        <div id="addDriver" class="tab-content">
+            <h2>Add Driver</h2>
+            <form id="addDriverForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                <label for="phone">Phone No:</label>
+                <input type="text" id="phone" required>
+                <label for="dl">DL No:</label>
+                <input type="text" id="dl" required>
+                <label for="debitCardNo">Debit Card No:</label>
+                <input type="text" id="debitCardNo" required>
+                <button type="submit">Add Driver</button>
+            </form>
+        </div>
+
+        <!-- View Drivers Tab -->
+        <div id="viewDrivers" class="tab-content" style="display: none;">
+            <h2>Driver List</h2>
+            <div id="driverList"></div>
+        </div>
+
+        <!-- Edit Driver Form -->
+        <div id="editDriverForm" class="tab-content" style="display: none;">
+            <h2>Edit Driver</h2>
+            <form id="editForm">
+                <label for="editDl">DL No:</label>
+                <input type="text" id="editDl" readonly>
+                <label for="newName">New Name:</label>
+                <input type="text" id="newName">
+                <label for="newPhone">New Phone No:</label>
+                <input type="text" id="newPhone">
+                <label for="newDebitCardNo">New Debit Card No:</label>
+                <input type="text" id="newDebitCardNo">
+                <button type="submit">Update Driver</button>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
