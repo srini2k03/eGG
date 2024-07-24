@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Supervision Panel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Supervision Panel</h1>
+        <div class="main-content">
+            <div class="sidebar">
+                <button class="tab-button" onclick="showTab('all')">All</button>
+                <button class="tab-button" onclick="showTab('verified')">Verified</button>
+                <button class="tab-button" onclick="showTab('not-verified')">Not Verified</button>
+            </div>
+            <div class="content">
+                <div class="sort-date-container">
+                    <label for="sort-date">Sort by Date:</label>
+                    <input type="date" id="sort-date" onchange="sortVehicles()">
+                </div>
+                <div id="all" class="tab-content">
+                    <h2>All Details</h2>
+                    <table id="all-table" class="details-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Vehicle Name</th>
+                                <th>Odometer Reading</th>
+                                <th>Odometer Image</th>
+                                <th>Petrol Bunk Image</th>
+                                <th>Fuel Type</th>
+                                <th>Total Amount</th>
+                                <th>Liters of Petrol</th>
+                                <th>Date</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="all-list"></tbody>
+                    </table>
+                </div>
+                <div id="verified" class="tab-content">
+                    <h2>Verified Details</h2>
+                    <table id="verified-table" class="details-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Vehicle Name</th>
+                                <th>Odometer Reading</th>
+                                <th>Odometer Image</th>
+                                <th>Petrol Bunk Image</th>
+                                <th>Fuel Type</th>
+                                <th>Total Amount</th>
+                                <th>Liters of Petrol</th>
+                                <th>Date</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="verified-list"></tbody>
+                    </table>
+                </div>
+                <div id="not-verified" class="tab-content">
+                    <h2>Not Verified Details</h2>
+                    <table id="not-verified-table" class="details-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Vehicle Name</th>
+                                <th>Odometer Reading</th>
+                                <th>Odometer Image</th>
+                                <th>Petrol Bunk Image</th>
+                                <th>Fuel Type</th>
+                                <th>Total Amount</th>
+                                <th>Liters of Petrol</th>
+                                <th>Date</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="not-verified-list"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js" type="module"></script>
+</body>
+</html>
