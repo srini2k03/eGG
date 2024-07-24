@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Vehicle Panel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <header class="header">
+            <h1>Admin Vehicle Panel</h1>
+        </header>
+        <div class="container">
+            <div class="tabs">
+                <button id="addVehicleTab" onclick="showTab('addVehicle')">Add Vehicle</button>
+                <button id="viewVehiclesTab" onclick="showTab('viewVehicles')">Update Vehicle</button>
+            </div>
+
+            <!-- Add Vehicle Tab -->
+            <div id="addVehicle" class="tab-content">
+                <h2>Add Vehicle</h2>
+                <form id="addVehicleForm" class="form">
+                    <label for="vehicleName">Vehicle Name:</label>
+                    <input type="text" id="vehicleName" required>
+                    <label for="licenseNumber">License Number:</label>
+                    <input type="text" id="licenseNumber" required>
+                    <button type="submit">Add Vehicle</button>
+                </form>
+            </div>
+
+            <!-- Update Vehicle Tab -->
+            <div id="viewVehicles" class="tab-content">
+                <h2>Update Vehicle</h2>
+                <table id="vehiclesTable" class="table">
+                    <thead>
+                        <tr>
+                            <th>Vehicle Name</th>
+                            <th>License Number</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="vehiclesList"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
